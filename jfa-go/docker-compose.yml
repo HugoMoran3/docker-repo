@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  jfa-go:
+    container_name: jfa-go
+    image: hrfee/jfa-go:latest
+    restart: unless-stopped
+    volumes:
+      - ./jfa-go/configs:/app/data/configs
+      - ./jfa-go/data:/data
+    ports:
+      - '8056:8056'
